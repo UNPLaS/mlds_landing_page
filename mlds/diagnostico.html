@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <!-- CSS -->
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/frontend.css" rel="stylesheet" />
+    <link href="../node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/accesibilidad.css" rel="stylesheet" />
+    <link href="../css/landing_page.css" rel="stylesheet" />
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/12f7911629.js" crossorigin="anonymous"></script>
+    <title>Diagnóstico - MLDS</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <!-- Panel de accesibilidad -->
+    <div id="panel-access" class="tx-unal-accesibilidad d-print-none"></div>
+    <!--Pestaña de servicios-->
+    <div id="panel-services"></div>
+
+    <!-- video background-->
+    <video autoplay muted loop id="myVideo">
+        <source src="../images/mlds_landing_page/file.mp4" type="video/mp4">
+    </video>
+
+    <!--Encuesta-->
+    <section class="mlds-section">
+        <div class="container">
+            <div class="survey-container d-flex flex-column">
+                <h1>Encuesta de diagnóstico</h1>
+                <p>En esta encuesta te ayudaremos a escoger desde qué línea deberías comenzar. Selecciona las
+                    afirmaciones que mejor describan tu caso</p>
+                <div class="row">
+                    <div class="col-md-12 animation" id="result" hidden>
+                    </div>
+                    <div class="col-md-12 animation" id="mod-0-list">
+                        <div class="survey-knowledge">
+                            <div class="d-flex justify-content-start survey-knowledge-list">
+                                <!-- mod 0 list -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row animation" id="modRequirements">
+                    <!--mods list-->
+                </div>
+                <!--form-->
+                <div class="row" id="form" hidden>
+                    <div class="col-md-6 mx-auto">
+                        <div class="">
+                            <h2>Preinscríbete ya</h2>
+                            <div class="d-grid" id="succesAlertForm" hidden>
+                                <h3>¡Muchas Gracias! Nos estaremos poniendo en contacto</h3>
+                                <a type="button" class="btn btn-primary btn-lg mb-3" id="backLPBtn" href="../mlds.html">Volver
+                                    página inicial</a>
+
+                            </div>
+                            <div class="alert alert-warning alert-dismissible" role="alert" id="errorAlertForm" hidden>
+                                <p>Ha ocurrido un error</p>
+                            </div>
+                            <form id="contactForm" class="d-grid">
+                                <div class="row mt-3">
+                                    <label for="nombre">Nombre Completo</label>
+                                    <div class="col">
+                                        <input id="nameForm" type="text" class="form-control" placeholder="Nombre"
+                                            name="nombre">
+                                    </div>
+                                    <div class="col">
+                                        <input id="lastNameForm" type="text" class="form-control" placeholder="Apellido"
+                                            name="apellidos">
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="email">Email *</label>
+                                    <input type="email" class="form-control" id="emailForm"
+                                        placeholder="name@example.com" name="email">
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        Ingrese un email válido
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="interes">Elige el programa de tu preferencia</label>
+                                    <select class="form-control" name="interes" id="interestForm">
+                                        <option selected disabled>Elige una opción</option>
+                                        <option value="Introduccion programacion">Introducción a la Programación con
+                                            Python</option>
+                                        <option value="Linea basica">MLDS - Línea Básica</option>
+                                        <option value="Linea avanzada">MLDS - Línea Avanzada</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg" id="formBtn">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-auto">
+                    <div class="col d-flex justify-content-end">
+                        <div class="survey-btn">
+                            <button type="button" class="btn btn-primary mb-3" id="surveyPrevBtn"
+                                hidden>Anterior</button>
+                            <button type="button" class="btn btn-primary mb-3" id="surveyNextBtn">Siguiente</button>
+                            <button type="button" class="btn btn-primary mb-3" id="surveySendBtn" hidden>Enviar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="topFunction()" class="plas-button rounded-2 shadow-lg ms-2 myBtn" id="myBtn" title="Ir al inicio">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- footer-->
+    <footer id="footer" class="container-fluid d-print-table pb-4"> </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("../components/header.html");
+        });
+        $(function () {
+            $("#panel-access").load("../components/panel-access.html");
+        });
+        $(function () {
+            $("#panel-services").load("../components/panel-services.html");
+        });
+        $(function () {
+            $("#footer").load("../components/footer.html");
+        });
+    </script>
+    <!-- JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/unal.js"></script>
+    <script src="../js/accesibilidad.js">setTimeout(2000);</script>
+    <script src="../js/contactenos.js"></script>
+    <script src="../js/mlds_landing_page/survey.js"></script>
+    <script src="../js/mlds_landing_page/form.js"></script>
+    <!-- Meta Pixel Code -->
+
+    <!-- End Meta Pixel Code -->
+</body>
+
+</html>

@@ -1,0 +1,428 @@
+#pestania-accesibilidad {
+  float: right;
+  cursor: pointer;
+  background-color: rgba(41, 41, 41, 0.8);
+  color: #fff;
+  height: 35px;
+  line-height: 35px;
+  margin-right: 40px;
+  font-weight: bold;
+  padding: 0 10px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: -35px;
+    top: 0;
+    content: '';
+    background-image: url(../images/access-icon.jpg);
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+body {
+  /*font-size: 14px;*/
+
+  &.tamanio-letra-110 {
+    font-size: calc(15px + 1.5px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 1.5px);
+    }
+
+    .tx-unal-accesibilidad .panel-content input.letras-porcentaje {
+      width: 64%;
+    }
+
+    h1 {
+      font-size: 37.5px;
+    }
+
+    h2 {
+      font-size: 31.5px;
+    }
+
+    .tx-unal-accesibilidad {
+      top: 148px;
+    }
+
+    .site-url a {
+      font-size: 31.5px;
+    }
+  }
+
+  &.tamanio-letra-120 {
+    font-size: calc(15px + 3px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 3px);
+    }
+
+    h1 {
+      font-size: calc(1.7em + 3px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 3px);
+    }
+
+    .tx-unal-accesibilidad .panel-content input.letras-porcentaje {
+      width: 64%;
+    }
+
+    .site-url a {
+      font-size: calc(30px + 3px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 154px;
+    }
+
+    main.accesibility-on {
+      padding-top: 230px;
+    }
+  }
+
+  &.tamanio-letra-130 {
+    font-size: calc(15px + 4.5px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 4.5px);
+    }
+
+    h1 {
+      font-size: calc(1.7em + 4.5px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 4.5px);
+    }
+
+    .site-url a {
+      font-size: calc(30px + 4.5px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 160px;
+
+      .panel-content input.letras-porcentaje {
+        width: 62%;
+      }
+    }
+
+    main.accesibility-on {
+      padding-top: 270px;
+    }
+  }
+
+  &.tamanio-letra-140 {
+    font-size: calc(15px + 6px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 6px);
+    }
+
+    h1 {
+      font-size: calc(1.7em + 6px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 6px);
+    }
+
+    .site-url a {
+      font-size: calc(30px + 6px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 169px;
+
+      .panel-content input.letras-porcentaje {
+        width: 60%;
+      }
+    }
+
+    main {
+      &.accesibility-on {
+        padding-top: 280px;
+      }
+
+      &.detail .rightContent {
+        h1 {
+          font-size: calc(1.7em + 6px);
+        }
+
+        h2 {
+          font-size: calc(1.4em + 6px);
+        }
+      }
+    }
+  }
+
+  &.tamanio-letra-150 {
+    font-size: calc(15px + 7.5px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 7.5px);
+    }
+
+    h1 {
+      font-size: calc(1.7em + 7.5px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 7.5px);
+    }
+
+    .site-url a {
+      font-size: calc(30px + 7.5px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 175px;
+
+      .panel-content input.letras-porcentaje {
+        width: 58%;
+      }
+    }
+
+    main.accesibility-on {
+      padding-top: 300px;
+    }
+  }
+
+  &.tamanio-letra-160 {
+    font-size: calc(15px + 9px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 9px);
+    }
+
+    h1 {
+      font-size: calc(1.7em + 9px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 9px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 181px;
+
+      .panel-content input.letras-porcentaje {
+        width: 55%;
+      }
+    }
+
+    .site-url a {
+      font-size: calc(30px + 9px);
+    }
+
+    main.accesibility-on {
+      padding-top: 320px;
+    }
+  }
+
+  &.tamanio-letra-170 {
+    font-size: calc(15px + 10.5px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 10.5px);
+    }
+
+    h1 {
+      font-size: calc(1.7em + 10.5px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 10.5px);
+    }
+
+    .site-url a {
+      font-size: calc(30px + 10.5px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 187px;
+
+      .panel-content input.letras-porcentaje {
+        width: 54%;
+      }
+    }
+
+    main.accesibility-on {
+      padding-top: 330px;
+    }
+  }
+
+  &.tamanio-letra-180 {
+    font-size: calc(15px + 12px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px +  12px);
+    }
+
+    h1 {
+      font-size: calc(1.7em +  12px);
+    }
+
+    h2 {
+      font-size: calc(1.4em +  12px);
+    }
+
+    .site-url a {
+      font-size: calc(30px +  12px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 196px;
+
+      .panel-content input.letras-porcentaje {
+        width: 50%;
+      }
+    }
+
+    main.accesibility-on {
+      padding-top: 340px;
+    }
+  }
+
+  &.tamanio-letra-190 {
+    font-size: calc(15px + 13.5px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px + 13.5px);
+    }
+
+    h1 {
+      font-size: calc(1.7em + 13.5px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 13.5px);
+    }
+
+    .site-url a {
+      font-size: calc(30px + 13.5px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 202px;
+
+      .panel-content input.letras-porcentaje {
+        width: 45%;
+      }
+    }
+
+    main.accesibility-on {
+      padding-top: 350px;
+    }
+  }
+
+  &.tamanio-letra-200 {
+    font-size: calc(15px + 15px);
+
+    p, li, b, ul, a, ol, h3, h4 {
+      font-size: calc(15px +  15px);
+    }
+
+    h1 {
+      font-size: calc(1.7em +  15px);
+    }
+
+    h2 {
+      font-size: calc(1.4em + 15px);
+    }
+
+    .site-url a {
+      font-size: calc(30px +  15px);
+    }
+
+    .tx-unal-accesibilidad {
+      top: 208px;
+
+      .panel-content input.letras-porcentaje {
+        width: 40%;
+      }
+    }
+
+    main.accesibility-on {
+      padding-top: 350px;
+    }
+  }
+}
+
+main.accesibility-on {
+  padding-top: 200px;
+}
+
+.tx-unal-accesibilidad {
+  z-index: 2;
+  top: 103px;
+  width: 100%;
+  left: 0;
+  background-color: transparent;
+}
+
+/*ajuste para el desplegable*/
+
+main.home {
+  margin-top: -35px;
+}
+
+.tx-unal-accesibilidad .panel-content {
+  padding: 1em;
+  border-bottom: 3px solid #292929;
+  float: left;
+  width: 100%;
+  padding: 3em 4em;
+  background-color: #fff;
+
+  .boton-panel {
+    padding: 10px;
+    background-color: #292929;
+    border: none;
+    color: #fff;
+    margin-right: 5px;
+    font-weight: bold;
+
+    &:hover, &:focus {
+      background-color: #0763c8;
+    }
+  }
+
+  .border {
+    border-right: #292929 solid 1px;
+  }
+
+  h4 {
+    color: #292929;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  input.letras-porcentaje {
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    background-color: rgba(41, 41, 41, 0.2);
+    font-weight: bold;
+    padding: 0px 10px;
+    width: auto;
+    text-align: center;
+  }
+}
+
+.contraste-1 {
+  background-color: red;
+}
+
+.contraste-2 {
+  background-color: green;
+}
+
+.contraste-3 {
+  background-color: blue;
+}

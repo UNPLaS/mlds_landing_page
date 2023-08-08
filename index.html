@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <!-- CSS -->
+  <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/frontend.css" rel="stylesheet" />
+  <link href="../node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+  <link href="css/accesibilidad.css" rel="stylesheet" />
+  <link href="css/landing_page.css" rel="stylesheet" />
+  <!-- JS -->
+  <script src="https://kit.fontawesome.com/12f7911629.js" crossorigin="anonymous"></script>
+  <title>Programa de Formación MLDS</title>
+</head>
+
+<body>
+  <header id="header"></header>
+  <!-- Panel de accesibilidad -->
+  <div id="panel-access" class="tx-unal-accesibilidad d-print-none"></div>
+  <!--Pestaña de servicios-->
+  <div id="panel-services"></div>
+
+  <!-- video background-->
+  <video autoplay muted loop id="myVideo">
+    <source src="images/mlds_landing_page/file.mp4" type="video/mp4">
+  </video>
+
+  <!-- Contenido 1 info -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="bottom-position">
+            <div class="bor">
+              <h1 class="primary-text">Certifícate en</h1>
+              <div class="secondary-text">
+                <h1>Machine Learning and Data Science</h1>
+                <p>Potencia tus conocimientos y proyéctate profesionalmente certificándote en algunas de las áreas más
+                  demandadas hoy en día con una de las mejores universidades en Latinoamérica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-contenet secondary-text">
+            <h2>Preinscríbete ya</h2>
+            <div class="alert alert-success" role="alert" id="succesAlertForm" hidden>
+              <p>¡Muchas Gracias! Nos estaremos poniendo en contacto</p>
+            </div>
+            <div class="alert alert-warning alert-dismissible" role="alert" id="errorAlertForm" hidden>
+              <p>Ha ocurrido un error</p>
+            </div>
+            <form id="contactForm">
+              <div class="row">
+                <label for="nombre">Nombre Completo</label>
+                <div class="col">
+                  <input id="nameForm" type="text" class="form-control" placeholder="Nombre" name="nombre">
+                </div>
+                <div class="col">
+                  <input id="lastNameForm" type="text" class="form-control" placeholder="Apellido" name="apellidos">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" class="form-control" id="emailForm" placeholder="name@example.com" name="email">
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                  Ingrese un email válido
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="interes">Elige el programa de tu preferencia</label>
+                <select class="form-control" name="interes" id="interestForm">
+                  <option selected disabled>Elige una opción</option>
+                  <option value="Introduccion programacion">Introducción a la Programación con Python</option>
+                  <option value="Linea basica">MLDS - Línea Básica</option>
+                  <option value="Linea avanzada">MLDS - Línea Avanzada</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary mb-3" id="formBtn">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--modulos-->
+  <section class="mlds-section bg-white">
+    <div class="container">
+      <iframe src="https://www.youtube.com/embed/46UXalgGozk" title="YouTube video player" class="shadow-lg"
+        id="video-mlds" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="row survey-rout">
+        <div class="col-md-8 justify-content-center">
+          <h2  style="margin-top: 1rem;">¿No sabes con qué módulo iniciar? Haz esta encuesta de diagnóstico</h2>
+        </div>
+        <div class="col-md-4 d-flex flex-column justify-content-center">
+          <a type="button" class="btn btn-primary" style="margin-bottom: 1rem;" href="mlds/diagnostico.html">Encuesta
+            diagnóstico</a>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="row">
+          <h2>Introduccion a la Programación con Python</h2>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <div class="text-center mod-img">
+              <img src="images/mlds_landing_page/intro.png" class="img-fluid" alt="icono modulo 0" width="70%">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p>Inicia con tus primeros pasos en el mundo de la programación, hazlo utilizando Python, uno de los
+              lenguajes más intuitivos, versátiles y utilizados actualmente</p>
+            <p class="primary-text" id="mod-0-val1">Gratis Primeras 3 unidades. Inversión: $150.000 Unidad 4 y 5 +
+              Certificado</p>
+          </div>
+          <div class="col-md-4">
+            <div class="row text-center justify-content-center">
+              <div class="col-lg-8 d-grid">
+                <a class="btn btn-primary" id="mod-0-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                <a class="btn btn-outline-primary" id="mod-0-brochure1" target="_blank"><i
+                    class="fa-solid fa-circle-down"></i> DESCARGAR RESUMEN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="module-item">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="text-center mod-img">
+                <img src="images/mlds_landing_page/hex_0.png" class="img-fluid" alt="icono modulo 0" width="70%">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <i>
+                <h3>Módulo 0</h3>
+              </i>
+              <h3>Introducción a la Programación con Python</h3>
+              <p>Aprende los conceptos básicos de la programación de computadores para la solución de problemas,
+                mediante el diseño e implementación de programas en el lenguaje de programación Python</p>
+              <p class="primary-text" id="mod-0-val2">Gratis Primeras 3 unidades. Inversión: $150.000 Unidad 4 y 5 +
+                Certificado</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row mod-data justify-content-center">
+                <div class="col-sm-4 text-center">
+                  <i>
+                    <p>Inicio</p>
+                  </i>
+                  <p class="important">Hoy</p>
+                  <i>
+                    <p>Ingreso abierto</p>
+                  </i>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <i>
+                    <p>Intensidad</p>
+                  </i>
+                  <p class="important">40</p>
+                  <i>
+                    <p>Horas</p>
+                  </i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-grid">
+                  <a class=" btn btn-primary" id="mod-0-insc2" target="_blank">¡INSCRÍBETE YA! <i
+                      class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="row">
+          <h2>Línea Básica</h2>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <div class="text-center mod-img">
+              <img src="images/mlds_landing_page/basico.png" class="img-fluid" alt="icono linea basica" width="70%">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p>En la línea básica aprenderás todo lo necesario para adentrarte en el mundo del Machine Learning & Data
+              Science con Python.
+              Desde un enfoque práctico, obtendrás conocimientos sólidos acerca de análisis y visualización de datos,
+              aprendizaje de máquina y Big Data.</p>
+            <p class="primary-text" id="bas-val1">Inversión: $1'250,000/módulo. Aplican descuentos</p>
+          </div>
+          <div class="col-md-4">
+            <div class="row text-center justify-content-center">
+              <div class="col-lg-8 d-grid">
+                <a class="btn btn-primary" id="bas-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                <a class="btn btn-outline-primary" id="bas-brochure1" target="_blank"><i
+                    class="fa-solid fa-circle-down"></i> DESCARGAR RESUMEN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="module-item">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="text-center mod-img">
+                <img src="images/mlds_landing_page/hex_1.png" class="img-fluid" alt="icono modulo 1" width="70%">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <i>
+                <h3>Módulo 1</h3>
+              </i>
+              <h3>Análisis y Visualización de Datos con Python</h3>
+              <p>Aprende los fundamentos para trabajar con datos: utilizarlos de forma programática, entenderlos,
+                limpiarlos, analizarlos, y extraer conocimiento de máximo valor</p>
+              <p class="primary-text" id="mod-1-val1">Inversión: $1'250,000.00</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row mod-data text-center">
+                <div class="col-sm-4">
+                  <i>
+                    <p>Inicio</p>
+                  </i>
+                  <p class="important" id="mod-1-startDay">14</p>
+                  <i>
+                    <p id="mod-1-startMonth">febrero</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Finalización</p>
+                  </i>
+                  <p class="important" id="mod-1-endDay">-</p>
+                  <i>
+                    <p id="mod-1-endMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Intensidad</p>
+                  </i>
+                  <p class="important">64</p>
+                  <i>
+                    <p>Horas</p>
+                  </i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-grid"">
+                <a class=" btn btn-primary" id="mod-1-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="text-center mod-img">
+                <img src="images/mlds_landing_page/hex_2.png" class="img-fluid" alt="icono modulo 2" width="70%">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <i>
+                <h3>Módulo 2</h3>
+              </i>
+              <h3>Introducción al Aprendizaje Computacional <br> (Machine Learning) con Python</h3>
+              <p>Aprende los fundamentos del Machine Learning y su uso para resolver problemas del análisis de datos
+              </p>
+              <p class="primary-text" id="mod-2-val1">Inversión: $1'250,000.00</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row mod-data text-center">
+                <div class="col-sm-4">
+                  <i>
+                    <p>Inicio</p>
+                  </i>
+                  <p class="important" id="mod-2-startDay">-</p>
+                  <i>
+                    <p id="mod-2-startMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Finalización</p>
+                  </i>
+                  <p class="important" id="mod-2-endDay">-</p>
+                  <i>
+                    <p id="mod-2-endMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Intensidad</p>
+                  </i>
+                  <p class="important">64</p>
+                  <i>
+                    <p>Horas</p>
+                  </i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-grid"">
+                <a class=" btn btn-primary" id="mod-2-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="text-center mod-img">
+                <img src="images/mlds_landing_page/hex_3.png" class="img-fluid" alt="icono modulo 3" width="70%">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <i>
+                <h3>Módulo 3</h3>
+              </i>
+              <h3>Big Data</h3>
+              <p>Aprende cómo se almacenan y procesan grandes volúmenes de datos a grandes velocidades</p>
+              <p class="primary-text" id="mod-3-val1">Inversión: $1'250,000.00</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row mod-data text-center">
+                <div class="col-sm-4">
+                  <i>
+                    <p>Inicio</p>
+                  </i>
+                  <p class="important" id="mod-3-startDay">14</p>
+                  <i>
+                    <p id="mod-3-startMonth">febrero</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Finalización</p>
+                  </i>
+                  <p class="important" id="mod-3-endDay">-</p>
+                  <i>
+                    <p id="mod-3-endMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Intensidad</p>
+                  </i>
+                  <p class="important">64</p>
+                  <i>
+                    <p>Horas</p>
+                  </i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-grid"">
+                <a class=" btn btn-primary" id="mod-3-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="row">
+          <h2>Línea Avanzada</h2>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <div class="text-center mod-img">
+              <img src="images/mlds_landing_page/avanzado 4 5 6.png" class="img-fluid" alt="icono linea avanzada"
+                width="70%">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p>En la línea avanzada profundizarás en todas las técnicas dentro del Machine Learning & Data Science. Esto
+              te permitirá expandir tus límites para la resolución de problemas complejos, además del manejo eficiente
+              de la información</p>
+            <p class="primary-text" id="adv-val1">Inversión: $1'250,000/módulo. Aplican descuentos</p>
+          </div>
+          <div class="col-md-4">
+            <div class="row text-center justify-content-center">
+              <div class="col-lg-8 d-grid">
+                <a class="btn btn-primary" id="adv-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                <a class="btn btn-outline-primary" id="adv-brochure1" target="_blank"><i
+                    class="fa-solid fa-circle-down"></i> DESCARGAR RESUMEN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="module-item">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="text-center mod-img">
+                <img src="images/mlds_landing_page/hex_4.png" class="img-fluid" alt="icono modulo 4" width="70%">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <i>
+                <h3>Módulo 4</h3>
+              </i>
+              <h3>Procesamiento y Entendimiento de Lenguaje Natural</h3>
+              <p>Aprende a extraer información valiosa a partir de texto, utilizarla como insumo, obtener resúmenes
+                clave y agrupar por
+                temáticas </p>
+              <p class="primary-text" id="mod-4-val1">Inversión: $1'250,000.00</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row mod-data text-center">
+                <div class="col-sm-4">
+                  <i>
+                    <p>Inicio</p>
+                  </i>
+                  <p class="important" id="mod-4-startDay">14</p>
+                  <i>
+                    <p id="mod-4-startMonth">febrero</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Finalización</p>
+                  </i>
+                  <p class="important" id="mod-4-endDay">-</p>
+                  <i>
+                    <p id="mod-4-endMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Intensidad</p>
+                  </i>
+                  <p class="important">64</p>
+                  <i>
+                    <p>Horas</p>
+                  </i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-grid"">
+                <a class=" btn btn-primary" id="mod-4-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="text-center mod-img">
+                <img src="images/mlds_landing_page/hex_5.png" class="img-fluid" alt="icono modulo 5" width="70%">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <i>
+                <h3>Módulo 5</h3>
+              </i>
+              <h3>Deep Learning: Introducción al Aprendizaje Profundo con Python</h3>
+              <p>Aprende cómo utilizar Deep Learning para trabajar con problemas complejos para la computación,
+                análisis de texto, imágenes y todo tipo de información avanzada</p>
+              <p class="primary-text" id="mod-5-val1">Inversión: $1'250,000.00</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row mod-data text-center">
+                <div class="col-sm-4">
+                  <i>
+                    <p>Inicio</p>
+                  </i>
+                  <p class="important" id="mod-5-startDay">14</p>
+                  <i>
+                    <p id="mod-5-startMonth">febrero</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Finalización</p>
+                  </i>
+                  <p class="important" id="mod-5-endDay">-</p>
+                  <i>
+                    <p id="mod-5-endMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Intensidad</p>
+                  </i>
+                  <p class="important">64</p>
+                  <i>
+                    <p>Horas</p>
+                  </i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-grid"">
+                <a class=" btn btn-primary" id="mod-5-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-item">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="text-center mod-img">
+                <img src="images/mlds_landing_page/hex_6.png" class="img-fluid" alt="icono modulo 6" width="70%">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <i>
+                <h3>Módulo 6</h3>
+              </i>
+              <h3>Metodologías Ágiles para el Desarrollo de Aplicaciones con Machine Learning</h3>
+              <p>Aprende las metodologías y prácticas para crear aplicaciones y proyectos que involucren machine
+                learning e inteligencia artificial. Profundiza en el flujo de trabajo para el desarrollo de software con
+                las tecnologías más recientes y ampliamente utilizadas en machine learning</p>
+              <p class="primary-text" id="mod-6-val1">Inversión: $1'250,000.00</p>
+            </div>
+            <div class="col-md-4">
+              <div class="row mod-data text-center">
+                <div class="col-sm-4">
+                  <i>
+                    <p>Inicio</p>
+                  </i>
+                  <p class="important" id="mod-6-startDay">-</p>
+                  <i>
+                    <p id="mod-6-startMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Finalización</p>
+                  </i>
+                  <p class="important" id="mod-6-endDay">-</p>
+                  <i>
+                    <p id="mod-6-endMonth">-</p>
+                  </i>
+                </div>
+                <div class="col-sm-4">
+                  <i>
+                    <p>Intensidad</p>
+                  </i>
+                  <p class="important">64</p>
+                  <i>
+                    <p>Horas</p>
+                  </i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-grid"">
+                <a class=" btn btn-primary" id="mod-6-insc1" target="_blank">¡INSCRÍBETE YA! <i
+                    class="fa-solid fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row survey-rout">
+        <div class="col-md-8 justify-content-center">
+          <h2  style="margin-top: 1rem;">¿No sabes con qué módulo iniciar? Haz esta encuesta diagnóstico</h2>
+        </div>
+        <div class="col-md-4 d-flex flex-column justify-content-center">
+          <a type="button" class="btn btn-primary" style="margin-bottom: 1rem;" href="mlds/diagnostico.html">Encuesta
+            diagnóstico</a>
+        </div>
+      </div>
+  </section>
+  <!--programa numeros-->
+  <section style="background-color: var(--darkColor);">
+    <div class="container secondary-text">
+      <div class="row text-center">
+        <h1>Nuestros programas en números</h1>
+      </div>
+      <div class="row align-items-center text-center">
+        <div class="col-md-4 text-center">
+          <p class="paragraph-big"><span>+</span> 1500</p>
+          <p style="padding-left: 2rem;">ESTUDIANTES HAN CURSADO EL PROGRAMA</p>
+        </div>
+        <div class="col-md-4">
+          <p class="paragraph-big"><span>+</span> 3500</p>
+          <p style="padding-left: 2rem;">CERTIFICADOS EMITIDOS</p>
+        </div>
+        <div class="col-md-4">
+          <p class="paragraph-big"><span>+</span> 420</p>
+          <p style="padding-left: 2rem;">HORAS DE CONTENIDO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--para quien está diseñado-->
+  <section style="background-color: var(--primaryColorTr);">
+    <div class="container">
+      <div class="row secondary-text text-justify">
+        <h1>¿Para quién está diseñado?</h2>
+          <div class="col-md-6 info-text">
+            <p>El programa está dirigido a todas las personas con responsabilidades o interés relacionado con el
+              desarrollo de procesos de análisis de datos y desarrollo de sistemas inteligentes y analíticos</p>
+            <hr>
+            <p>Personas que se desarrollen cómo: gerentes de informática, analistas, desarrolladores. El programa
+              también está dirigido a profesionales en áreas cómo: Ingeniería, ciencias naturales, economía, matemática
+              y estadística, interesados en el aprendizaje computacional.</p>
+            <hr>
+            <p>Se requiere que los estudiantes tengan familiaridad previa con conceptos de programación; sin embargo, si
+              no poseen estos conceptos, pueden iniciar con el curso gratuito preparatorio, creado especialmente para
+              iniciar este programa.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="text-center mod-img">
+              <img src="images/mlds_landing_page/pexels-cottonbro-5474028 (1).webp" class="img-fluid"
+                alt="persona programando">
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!--que vas a aprender-->
+  <section class="mlds-section bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center info-text info-text-wh">
+          <div class="row">
+            <h1 class="primary-text">¿Qué vas a aprender?</h1>
+            <p>En este programa certificado de formación online te aproximarás de forma práctica y profunda a las
+              herramientas más utilizadas y demandadas para el desempeño efectivo en las áreas de
+              Machine Learning & Data Science.</p>
+          </div>
+          <div class="row info-text-sub">
+            <div class="col-md-4">
+              <img src="images/mlds_landing_page/ic1.png" class="img-fluid" alt="icono 1" width="30%">
+              <p>Planeación y ejecución de proyectos de análisis de datos</p>
+            </div>
+            <div class="col-md-4">
+              <img src="images/mlds_landing_page/ic2.png" class="img-fluid" alt="icono 2" width="24%">
+              <p>Hallar características relevantes y relaciones importantes entre datos</p>
+            </div>
+            <div class="col-md-4">
+              <img src="images/mlds_landing_page/ic3.png" class="img-fluid" alt="icono 3" width="30%">
+              <p>Resolver problemas de análisis de datos mediante técnicas de aprendizaje computacional</p>
+            </div>
+            <div class="col-md-4">
+              <img src="images/mlds_landing_page/ic4.png" class="img-fluid" alt="icono 4" width="25%">
+              <p>Implementar soluciones mediante librerías especializadas en el lenguaje Python</p>
+            </div>
+            <div class="col-md-4">
+              <img src="images/mlds_landing_page/ic5.png" class="img-fluid" alt="icono 5" width="26%">
+              <p>Desarrollar soluciones computacionales con almacenamiento, procesamiento y acceso a grandes volúmenes
+                de datos</p>
+            </div>
+            <div class="col-md-4">
+              <img src="images/mlds_landing_page/ic6.png" class="img-fluid" alt="icono 6" width="20%">
+              <p>Ejecutarás proyectos en los que se requieran tecnologías Big Data</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <img src="images/mlds_landing_page/Departamento de ingeniería de sistemas e industrial.webp"
+              class="img-fluid shadow" alt="certificado representativo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- quienes dictan el programa -->
+  <section style="background-color: var(--darkColor);">
+    <div class="container">
+      <div class="row text-center">
+        <h1 class="secondary-text" style="margin-bottom: 1rem;">¿Quiénes dictan el programa?</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="height: 100%;">
+            <div class="text-center">
+              <img src="images/mlds_landing_page/Prof felipe.webp" class="card-img-top rounded img-thumbnail"
+                alt="Profesor felipe">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title primary-text">Felipe Restrepo Calle, PhD</h3>
+              <p class="card-text text-justify">Profesor del Departamento de Ingeniería de Sistemas e Industrial en la
+                Universidad
+                Nacional de Colombia, sede Bogotá. Sus áreas de interés incluyen: lenguajes de programación, análisis
+                automático de código fuente, procesadores de lenguaje, diseño de sistemas embebidos y educación en
+                ingeniería. Cuenta con más de 50 publicaciones científicas en revistas, libros y conferencias
+                internacionales. Actualmente lidera el grupo de investigación <a href="http://plas.unal.edu.co"
+                  target="_blank">PLaS</a>
+                (Programming
+                Languages and Systems) y
+                es el Coordinador de la Maestría en Ingeniería de Sistemas y Computación.</p>
+              <a href="https://dis.unal.edu.co/~ferestrepoca/" target="_blank" class="mt-auto btn btn-primary">Felipe
+                Restrepo
+                Calle, PhD</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="height: 100%;">
+            <div class="text-center">
+              <img src="images/mlds_landing_page/Prof Fabio.webp" class="card-img-top rounded img-thumbnail"
+                alt="Profesor Fabio">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title primary-text">Fabio González, PhD</h3>
+              <p class="card-text text-justify">Profesor Titular del Departamento de Ingeniería de Sistemas e
+                Industrial. Coordinador
+                del programa de Doctorado en Ingeniería de Sistemas y Computación, Universidad Nacional de Colombia,
+                Bogotá. Amplia experiencia en investigación en aprendizaje computacional, minería de datos, recuperación
+                de información, procesamiento de lenguaje natural y visión por computador. Participación en diversos
+                proyectos de investigación internacionales y nacionales. Más de 100 publicaciones científicas en
+                revistas, libros y conferencias internacionales. Lidera el grupo de investigación <a
+                  href="https://ingenieria.unal.edu.co/mindlab/" target="_blank">MindLab</a> (Machine
+                Learning Perception and Discovery Lab). </p>
+              <a href="https://dis.unal.edu.co/~fgonza/" target="_blank" class="mt-auto btn btn-primary">Fabio González,
+                PhD</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="height: 100%;">
+            <div class="text-center">
+              <img src="images/mlds_landing_page/Prof Jorge.webp" class="card-img-top rounded img-thumbnail"
+                alt="Profesor Jorge">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title primary-text">Jorge Eliecer Camargo, PhD </h3>
+              <p class="card-text text-justify"> Profesor del Departamento de Ingeniería de Sistemas e Industrial de la
+                Universidad
+                Nacional de Colombia, Sede Bogotá. Cuenta con más de 60 publicaciones científicas en revistas, libros y
+                conferencias internacionales relacionadas con el manejo de grandes volúmenes de datos (big data) y
+                aplicaciones de machine learning en imágenes, audio y texto. Actualmente es líder del grupo de
+                investigación en ciberseguridad <a href="https://ingenieria.unal.edu.co/un-securelab/"
+                  target="_blank">UnSecureLab</a>.</p>
+              <a href="https://sites.google.com/site/camargoj/" target="_blank" class="mt-auto btn btn-primary">Jorge
+                Eliecer
+                Camargo, PhD</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- como vas a aprender-->
+  <section class="mlds-section bg-white">
+    <div class="container">
+      <div class=" row text-center primary-text">
+        <h1>¿Cómo vas a aprender?</h1>
+      </div>
+      <div class="row text-center align-items-center icons-img">
+        <div class="col-md-4">
+          <img src=" images/mlds_landing_page/ic7.png" class="img-fluid" alt="icono 7" width="30%">
+          <p>Tendrás acceso a una plataforma de aprendizaje autónomo especialmente diseñada para que afiances tus
+            conocimientos mediante la práctica.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/mlds_landing_page/ic8.png" class="img-fluid" alt="icono 8" width="30%">
+          <p>Sé parte de una comunidad de aprendizaje, donde podrás resolver tus dudas, trabajar en equipo y mucho más.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/mlds_landing_page/ic10.png" class="img-fluid" alt="icono 9" width="30%">
+          <p>Profesores PhD. expertos en el área con experiencia nacional e internacional te guiarán en el proceso.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/mlds_landing_page/Python png (1).webp" class="img-fluid" alt="icono 10" width="25%">
+          <p>¡Aprenderás mediante el uso de Python, uno de los lenguajes de programación más utilizados.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/mlds_landing_page/ic11.png" class="img-fluid" alt="icono 11" width="25%"
+            style="margin-bottom: 1rem;">
+          <p>Accede a todo el contenido 24/7 desde cualquier lugar, además tendrás sesiones en vivo con tus profesores
+            para afianzar tus avances.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/mlds_landing_page/ic12.png" class="img-fluid" alt="icono 12" width="17%"
+            style="margin-bottom: 1rem;">
+          <p>Demuestra tu conocimiento mediante un certificado profesional validado por la Universidad Nacional de
+            Colombia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- resumen -->
+  <section style="background-color: var(--primaryColorTr);">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col-lg-4">
+          <div class="card formation-rout" style="height: 100%">
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title text-center">Introducción
+                a la programación con Python</h2>
+              <ul>
+                <li>
+                  Aprende a programar desde 0, todo lo que necesitas para iniciar tu camino con Python.
+                </li>
+                <li>
+                  Horarios: Plataforma disponible 24/7, avanza a tu ritmo.
+                </li>
+                <li>
+                  5 Unidades/40 horas contenido
+                </li>
+              </ul>
+              <iframe src="https://www.youtube.com/embed/m4H3bo0zdDI" title="YouTube video player" id="video-mod-0"
+                class="shadow-sm"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <div class="text-center primary-text invertion-container-mod0">
+                <p>INVERSIÓN:</p>
+                <p id="mod-0-val3">$ 0.00 primeras 3 unidades <br>$ 150.000 unidad 4 y 5 + certificado</p>
+                <p></p>
+              </div>
+              <a class="mt-auto btn btn-primary" id="mod-0-insc3" target="_blank">¡INSCRÍBETE YA! <i
+                  class="fa-solid fa-angle-right"></i></a>
+              <a class="btn btn-outline-primary" id="mod-0-brochure2" target="_blank"><i
+                  class="fa-solid fa-circle-down"></i> DESCARGAR RESUMEN</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card formation-rout" style="height: 100%">
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title text-center">Machine Learning <br>&<br>
+                Data Science <br> BÁSICO</h2>
+              <ul>
+                <li>
+                  Lleva tus conocimientos a un nuevo nivel
+                </li>
+                <li>
+                  Aprenderás
+                  <ol>
+                    <li>Análisis y visualización de datos con Python</li>
+                    <li>Introducción al Machine Learning con Python</li>
+                    <li>Big Data</li>
+                  </ol>
+                </li>
+                <li>
+                  Horarios: Plataforma disponible 24/7 + sesiones online en vivo con los profesores. 
+                </li>
+                <li>
+                  3 Módulos, 64 horas /Módulo
+                </li>
+              </ul>
+              <iframe src="https://www.youtube.com/embed/S6xbNyvVyiY" title="YouTube video player" id="video-bas"
+                class="shadow-sm"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <div class="text-center primary-text invertion-container">
+                <p>INVERSIÓN:</p>
+                <p id="bas-val2">$ 1.250.000/Módulo</p>
+              </div>
+              <p style="font-size: 1rem;">Aplican descuentos por pronto pago,
+                alianzas y convenios​.</p>
+              <a class="mt-auto btn btn-primary" id="bas-insc2" target="_blank">¡INSCRÍBETE YA! <i
+                  class="fa-solid fa-angle-right"></i></a>
+              <a class="btn btn-outline-primary" id="bas-brochure2" target="_blank"><i
+                  class="fa-solid fa-circle-down"></i> DESCARGAR RESUMEN</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card formation-rout" style="height: 100%">
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title text-center">Machine Learning <br>&<br>
+                Data Science AVANZADO</h2>
+              <ul>
+                <li>
+                  Lleva tus conocimientos a un nuevo nivel
+                </li>
+                <li>
+                  Aprenderás
+                  <ol>
+                    <li>Procesamiento y entendimiento del lenguaje natural</li>
+                    <li>Deep Learning (aprendizaje profundo con python)</li>
+                    <li>Metodologías ágiles para el desarrollo de aplicaciones con Machine Learning. </li>
+                  </ol>
+                </li>
+                <li>
+                  Horarios: Plataforma disponible 24/7 + sesiones online en vivo con los profesores. 
+                </li>
+                <li>
+                  3 Módulos, 64 horas /Módulo
+                </li>
+              </ul>
+              <iframe src="https://www.youtube.com/embed/cqOd_Rij4bA" title="YouTube video player" id="video-bas"
+                class="shadow-sm"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <div class="text-center primary-text invertion-container">
+                <p>INVERSIÓN:</p>
+                <p id="adv-val2">$ 1.250.000/Módulo</p>
+              </div>
+              <p style="font-size: 1rem;">Aplican descuentos por pronto pago,
+                alianzas y convenios​.</p>
+              <a class="mt-auto  btn btn-primary" id="adv-insc2" target="_blank">¡INSCRÍBETE YA! <i
+                  class="fa-solid fa-angle-right"></i></a>
+              <a class="btn btn-outline-primary" id="adv-brochure2" target="_blank"><i
+                  class="fa-solid fa-circle-down"></i> DESCARGAR RESUMEN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button onclick="topFunction()" class="plas-button rounded-2 shadow-lg ms-2 myBtn" id="myBtn" title="Ir al inicio">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- footer-->
+  <footer id="footer" class="container-fluid d-print-table pb-4"> </footer>
+  <!-- JS -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/unal.js"></script>
+  <script src="js/accesibilidad.js"></script>
+  <script src="js/contactenos.js"></script>
+  <script src="js/mlds_landing_page/landing_page.js"></script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '886221709423615');
+    fbq('track', 'PageView');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#header").load("components/header.html");
+    });
+    $(function () {
+      $("#panel-access").load("components/panel-access.html");
+    });
+    $(function () {
+      $("#panel-services").load("components/panel-services.html");
+    });
+    $(function () {
+      $("#footer").load("components/footer.html");
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=886221709423615&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+//colores
+$gris_text_unal: #ddd;
+$gris_unal: #999;
+$gris_context: #666;
+$gris-header: #484444e7;
+$blanco: #fff;
+$aspirantes: #2A044A;
+$estudiantes: #0B2E59;
+$egresados: #0D6759;
+$docentes: #7AB317;
+$administrativos: #5e9281;
+$black-l: rgb(48, 48, 48);
+$verde_unal: #94B43B;
+$verde_unal_dark: #667c29;
+$negro_unal: #333;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+
+
+//fuentes
+@font-face {
+    font-family: 'Ancizar sans';
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/ancizarsans_bold_italic-webfont.eot"), url("../fonts/ancizarsans_bold_italic-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarsans_bold_italic-webfont.woff") format('woff'), url("../fonts/ancizarsans_bold_italic-webfont.ttf") format('truetype'), url("../fonts/ancizarsans_bold_italic-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+
+@font-face {
+    font-family: 'Ancizar sans';
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/ancizarsans_bold-webfont.eot"), url("../fonts/ancizarsans_bold-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarsans_bold-webfont.woff") format('woff'), url("../fonts/ancizarsans_bold-webfont.ttf") format('truetype'), url("../fonts/ancizarsans_bold-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+
+@font-face {
+    font-family: 'Ancizar sans';
+    font-weight: normal;
+    font-style: italic;
+    src: url("../fonts/ancizarsans_italic-webfont.eot"), url("../fonts/ancizarsans_italic-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarsans_italic-webfont.woff") format('woff'), url("../fonts/ancizarsans_italic-webfont.ttf") format('truetype'), url("../fonts/ancizarsans_italic-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+
+@font-face {
+    font-family: 'Ancizar sans';
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/ancizarsans_regular-webfont.eot"), url("../fonts/ancizarsans_regular-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarsans_regular-webfont.woff") format('woff'), url("../fonts/ancizarsans_regular-webfont.ttf") format('truetype'), url("../fonts/ancizarsans_regular-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+
+@font-face {
+    font-family: 'Ancizar serif';
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/ancizarserif_bold_italic-webfont.eot"), url("../fonts/ancizarserif_bold_italic-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarserif_bold_italic-webfont.woff") format('woff'), url("../fonts/ancizarserif_bold_italic-webfont.ttf") format('truetype'), url("../fonts/ancizarserif_bold_italic-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+
+@font-face {
+    font-family: 'Ancizar serif';
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/ancizarserif_bold-webfont.eot"), url("../fonts/ancizarserif_bold-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarserif_bold-webfont.woff") format('woff'), url("../fonts/ancizarserif_bold-webfont.ttf") format('truetype'), url("../fonts/ancizarserif_bold-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+
+@font-face {
+    font-family: 'Ancizar serif';
+    font-weight: normal;
+    font-style: italic;
+    src: url("../fonts/ancizarserif_italic-webfont.eot"), url("../fonts/ancizarserif_italic-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarserif_italic-webfont.woff") format('woff'), url("../fonts/ancizarserif_italic-webfont.ttf") format('truetype'), url("../fonts/ancizarserif_italic-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+
+@font-face {
+    font-family: 'Ancizar serif';
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/ancizarserif_regular-webfont.eot"), url("../fonts/ancizarserif_regular-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/ancizarserif_regular-webfont.woff") format('woff'), url("../fonts/ancizarserif_regular-webfont.ttf") format('truetype'), url("../fonts/ancizarserif_regular-webfont.svg#ancizar_sansbold_italic") format('svg');
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-family: "Ancizar sans", Tahoma, Geneva, sans-serif;
+}
+header {
+    background: $gris-header;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .logo {
+        z-index: 1;
+        background: no-repeat url("../images/sealBck.png");
+        width: 17vw;
+        position: absolute;
+        margin-left: 10px;
+        background-size: cover;
+        height: 10vw;
+        @include media-breakpoint-down(md) {background: none; }
+        .svg {
+            width: 95%;
+    position: relative;
+    bottom: -5px;
+    left: 8px;
+        }
+        
+        @include media-breakpoint-down(md) {.svg{height: 55px; bottom: 7px !important; width: 100px;}}
+        @include media-breakpoint-down(lg) {.svg{bottom: -18px;}}
+        
+    }
+    @include media-breakpoint-down(xl) { .logo{height: 11vw;}}
+    @include media-breakpoint-down(lg) { .logo{height: 13vw;}}
+    .seal {
+        position: absolute;
+        right: 1px;
+        top: 37px;
+        z-index: 1;
+    }
+    @include media-breakpoint-down(md) {.seal {right: 105px;
+        top: -12px;
+        z-index: 1;
+        transform: scale(0.5);} }
+        
+    .firstMenu {
+        background: $gris_context;
+        position: absolute;
+        width: 100%;
+        display: flex !important;
+        align-items: stretch;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: flex-end;
+        @include media-breakpoint-down(md) {.navbar {height:39px !important;}}
+        .navbar {
+            padding: 0;
+            font-size: 0.85em;
+            height: 28px;
+            .navbar-toggler {margin: 0 12px;}
+            a {
+                text-decoration: none;
+            }
+        }
+        ul.socialLinks {
+            margin-bottom: 0;
+            padding: 10px;
+            li {
+                display: inline-block;
+                margin: 5px 2px;
+                padding: 0;
+                a {
+                    display: block;
+                    height: 20px;
+                    width: 20px;
+                }
+                a.blogger,
+                a.email,
+                a.facebook,
+                a.flickr,
+                a.rss,
+                a.twitter,
+                a.youtube {
+                    background: no-repeat url("../images/icnSocial.png");
+                }
+                a.facebook {
+                    background-position: -21px 0;
+                }
+                a.facebook:hover {
+                    background-position: -21px -21px;
+                }
+                a.twitter {
+                    background-position: 0 0;
+                }
+                a.twitter:hover {
+                    background-position: 0 -21px;
+                }
+                a.youtube {
+                    background-position: -84px 0;
+                }
+                a.youtube:hover {
+                    background-position: -84px -21px;
+                }
+            }
+        }
+        #profiles {
+            .nav-item{transition: background-color 0.5s ease;} 
+            li {
+                border-left: 1px solid #3d3d3d;
+                padding: 7px 10px;
+              
+            }
+            .nav-item.item_Aspirantes:hover {
+                background-color: $aspirantes;
+            }
+            .nav-item.item_Estudiantes:hover {
+                background-color: $estudiantes;
+            }
+            .nav-item.item_Egresados:hover {
+                background-color: $egresados;
+            }
+            .nav-item.item_Docentes:hover {
+                background-color: $docentes;
+            }
+            .nav-item.item_Administrativos:hover {
+                background-color: $administrativos;
+            }
+            .nav-item {
+                color: $blanco;
+
+                a {
+                    color: $blanco;
+                }
+            }
+
+        }
+        .language-button {
+            background-color: #666;
+            border: none;
+            padding: 0 5px;
+        }
+        .language-dropdown {
+            right: 0;
+            left: auto;
+            color: $blanco;
+            background: $black-l;
+            min-width: auto;
+            li {
+                text-align: end;
+            }
+            a {
+                color: $blanco;
+            }
+            a:hover {
+                color: $black-l;
+            }
+        }
+    }
+    #bs-navbar {
+        width: 100%;
+        margin: 0 0 0 18vw;
+        .myb {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            top: 35px;
+            
+           
+            .site-url {
+                font-size: 1.5rem;
+                padding: 1px;
+                a {
+                    color: $blanco;
+                    text-decoration: none;
+                    padding: 1px;
+                }
+                .oi-map-marker {
+                    width: auto;
+                    color: $gris_unal;
+                    padding: 1px;
+                    font-size: 1rem;
+                }
+            }
+            .buscador {
+                margin-right: 30px;
+
+            }
+        }
+        @include media-breakpoint-down(md) {.myb{display: none;}}
+        .mainMenu {
+            margin-top: 30px;
+        }
+
+        #buscador {
+            width: 20vw;
+            display: inline-block;
+        }
+        #subdominio {
+            display: inline-block;
+        }
+    }
+}
+
+
+#unalTop .firstMenu ul.socialLinks li a.facebook {
+    background-position: -21px 0;
+}
+/*Menu principal*/
+
+.menuPrincipal {
+    padding: 0;
+    bottom: 5px;
+    margin-top: 40px;
+    color: $blanco;
+    left: -20px;
+    .container-fluid {
+        .navbar-collapse {margin-top: 10px;
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        padding: 0 1rem;
+                        color: $blanco;
+                        text-transform: uppercase;
+                    }
+                     @include media-breakpoint-down(md) {ul{background-color: #48444400 !important; border: none;}}
+                    ul {
+                        background-color: $gris_context;
+                        
+                        li {
+                            @include media-breakpoint-down(md) {a{text-decoration: none; padding: 2px 10px;}}
+                            a {
+                                color: $blanco;
+                            }
+                            a:hover {
+                                color: $black-l;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menuSedes {
+            justify-content: flex-end;
+            margin-right: 45px;
+        }
+        @include media-breakpoint-up(md) {.menuProfiles {display:none !important;} }
+        @include media-breakpoint-up(md) {.menuServices {display:none !important;} }
+        
+        
+    }
+
+}
+
+main {min-height: 30em;}
+.breadcrumb-class {
+    border-bottom: 1px dotted #646464;
+    color: #323232;
+    line-height: 30px;
+    margin: 2% 10% 50px 10%;
+    font-size: 0.9em;    
+a {color: #94b43b; margin: 0 .3em; font-weight: bold;}
+a:hover {	color: #333;
+}}
+/* servicios*/
+@include media-breakpoint-down(md) {#servicios  {li {margin: 10px 0px;}} }
+
+
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -200px;
+    background-color: $gris_context;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background:$negro_unal;
+    font-size: .9em;
+    z-index: 3;
+    ul{ padding-left: 5px;
+        li {
+            list-style: none;
+        }
+    }
+}
+@include media-breakpoint-down(md) { .hsidebar {display: none;} }
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: .9em;
+    color: $blanco;
+    display: block;
+    border-bottom: 1px solid #222;
+    border-top: 1px solid #444;
+    transition: 0.3s;
+    img{margin-right: 5px;}
+}
+
+/* Mouse over the navigation
+		links, to change their color */
+.sidebar a:hover {
+    color: green;
+}
+
+/* Position and style the close
+		button at top right corner */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    
+width: 34px;
+height: 126px;
+background-image: url(../images/backServices.png);
+background-position: 0 0;
+background-color:$verde_unal ;
+cursor: pointer;
+}
+
+.openbtn:hover {
+    background-color: $verde_unal_dark;
+}
+
+
+#main {
+
+    
+    transition: right 0.5s;
+    
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: .9em;
+    }
+}
+
+/*footer*/
+footer {
+    background: $gris_context;
+}
+ 
+ footer.container-fluid { color: $blanco;
+    font-size: 0.8em;
+    padding: 15px;
+    
+    nav {
+        a {
+            display: inline-block;
+            width: 49%;
+            color: $blanco;
+            text-decoration: none;
+        }
+    }
+    .contder {
+        display: flex;
+        color: $gris_text_unal;
+        border-left: 1px solid #999;
+        border-right: 1px solid #999;
+        .derechos {text-align: right;}
+        
+        a{
+            color: $blanco;
+            text-decoration: none;
+        }
+    }
+    @include media-breakpoint-down(md) {.contder {
+        border-top: 1px solid $gris_unal;
+        border-bottom: 1px solid $gris_unal;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 15px 0;
+        border-left: none;
+        border-right: none;} }
+    
+        .row{line-height: 1.125em;}
+    
+}
+#main{
+    right: 0px;
+    position:fixed;
+    top: 190px;
+    
+}
+@include media-breakpoint-between(xs, md) {.asoc-img {
+    border-top: 1px solid $gris_unal;
+    border-bottom: 1px solid $gris_unal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 15px 0;
+    border-left: none;
+    border-right: none;} }
+@include media-breakpoint-down(xs)   {.asoc-img{border: none;}} 
+    
+
+.asoc-img {.container{
+    padding: 0px;
+    @include media-breakpoint-down(xs) {.row-cols-2{text-align-last: center;}}}}
+
+    .dropdown-toggle::after {color: $verde_unal;}
+
+    div#pestania-accesibilidad-mobile {
+        position: absolute;
+        background-image: url(../images/access-icon.png);
+        width: 25px;
+        height: 25px;
+        top: 8px;
+        right: 170px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;}
+        @include media-breakpoint-down(md) {#pestania-accesibilidad{display: none;}}    
+
+
+        

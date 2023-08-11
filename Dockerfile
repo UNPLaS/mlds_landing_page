@@ -1,19 +1,8 @@
-FROM node:14
+# Use a lightweight web server as the base image
+FROM nginx:alpine
 
-# Set the working directory inside the container
-WORKDIR /usr/src/app
-
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
-
-# Install application dependencies
-RUN npm install
-
-# Copy the rest of the application code to the container
-COPY . .
+# Copy your static web page files to the container's web root
+COPY . /usr/share/nginx/html
 
 # Expose the port that lite-server will listen on
-EXPOSE 3000
-
-# Start the application
-CMD ["npm", "run", "server"]
+EXPOSE 80

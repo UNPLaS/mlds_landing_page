@@ -19,6 +19,7 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
     #Install npm dependecies
+    - run: npm i
     - run: npm ci
     #Action for build and push the image
     - uses: mr-smithers-excellent/docker-build-push@v5

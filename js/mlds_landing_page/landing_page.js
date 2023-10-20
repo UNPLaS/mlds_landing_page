@@ -171,8 +171,8 @@ emailInputElement.addEventListener('change', e => {
 
 
 form.addEventListener('submit', e => {
-    const btn = document.getElementById('formBtn')
     e.preventDefault()
+    const btn = document.getElementById('formBtn')
     if (checkForm()) {
         btn.disabled = true
         fetch(formScriptURL, { method: 'POST', body: new FormData(form) })
@@ -180,11 +180,14 @@ form.addEventListener('submit', e => {
                 showSuccesFormAlert()
             }).then(() => {
                 btn.disabled = false
+            }).then(()=>{
+                form.reset();
             })
             .catch(response => {
                 console.log(response)
                 showErrorFormAlert()
             })
+            
     }
 
 });

@@ -119,6 +119,8 @@ function updateUrls(urls) {
     document.getElementById("mod-4-insc1").href = urls.insc_mod_4
     document.getElementById("mod-5-insc1").href = urls.insc_mod_5
     document.getElementById("mod-6-insc1").href = urls.insc_mod_6
+    document.getElementById("mod-7-insc1").href = urls.insc_mod_7
+    document.getElementById("mod-8-insc1").href = urls.insc_mod_8
 
     document.getElementById("bas-insc1").href = urls.insc_bas
     document.getElementById("bas-insc2").href = urls.insc_bas
@@ -134,6 +136,9 @@ function updateUrls(urls) {
 
     document.getElementById("adv-brochure1").href = urls.brochure_b
     document.getElementById("adv-brochure2").href = urls.brochure_b
+
+    document.getElementById("oth1-brochure1").href = urls.brochure_d
+    document.getElementById("oth2-brochure1").href = urls.brochure_e
 }
 
 function updateText(texts) {
@@ -147,10 +152,13 @@ $${texts.value_mod_0} Unidad 4 y 5 + Certificado`
     document.getElementById("mod-4-val1").innerHTML = `Inversión: $${texts.value_mod_4}`
     document.getElementById("mod-5-val1").innerHTML = `Inversión: $${texts.value_mod_5}`
     document.getElementById("mod-6-val1").innerHTML = `Inversión: $${texts.value_mod_6}`
+    document.getElementById("mod-7-val1").innerHTML = `Inversión: $${texts.value_mod_7}`
+    document.getElementById("mod-8-val1").innerHTML = `Inversión: $${texts.value_mod_8}`
     document.getElementById("bas-val1").innerHTML = `Inversión: ${texts.value_bas}. Aplican descuentos`
     document.getElementById("bas-val2").innerHTML = `Inversión: ${texts.value_bas}`
     document.getElementById("adv-val1").innerHTML = `Inversión: ${texts.value_adv}. Aplican descuentos`
     document.getElementById("adv-val2").innerHTML = `Inversión: ${texts.value_adv}`
+    document.getElementById("oth-val1").innerHTML = `Inversión: ${texts.value_oth}. Aplican descuentos`
 }
 
 emailInputElement.addEventListener('change', e => {

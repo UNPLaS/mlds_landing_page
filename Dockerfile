@@ -1,5 +1,5 @@
 # Use a lightweight web server as the base image
-FROM nginx:alpine
+FROM nginx:1.25-alpine
 
 # Copy your static web page files to the container's web root
 COPY . /usr/share/nginx/html

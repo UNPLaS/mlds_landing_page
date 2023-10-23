@@ -22,7 +22,7 @@ jobs:
     - run: npm i
     - run: npm ci
     #Action for build and push the image
-    - uses: mr-smithers-excellent/docker-build-push@v5
+    - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build & push Docker image mlds-landing-page
       with:
         image: unjudge/mlds-landing-page
